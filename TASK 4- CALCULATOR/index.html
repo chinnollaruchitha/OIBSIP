@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="en" style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms no-csstransforms3d csstransitions fontface no-generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>Calculator - My ASP.NET Web Page</title>
+        <link href="./Calculator - My ASP.NET Web Page_files/jquery.ui.all.css" rel="stylesheet" type="text/css">
+        <link href="./Calculator - My ASP.NET Web Page_files/Site.css" rel="stylesheet" type="text/css">
+        
+        <script src="./Calculator - My ASP.NET Web Page_files/jquery-3.4.1.min.js.download"></script>
+        <script src="./Calculator - My ASP.NET Web Page_files/jquery-ui-1.12.1.js.download"></script>
+        <script src="./Calculator - My ASP.NET Web Page_files/modernizr-2.8.3.js.download"></script>
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title"><img style="border-radius: 50%; background: linear-gradient(145deg, #ffffff, #e6e6e6); box-shadow: 5px 5px 14px #c2c2c2, -5px -5px 14px #ffffff; </a></p>
+                </div>
+                <div class="float-right">
+                    <section id="login">
+                        <ul>
+
+
+                        </ul>
+                    </section>
+                    <nav>
+                        <ul id="menu">
+                            <li><a href="http://localhost:8234/">Home</a></li>
+                            <li><a href="http://localhost:8234/Calculator">Calculator</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div id="body">
+
+            <section class="content-wrapper main-content clear-fix">
+                
+                
+                <hgroup class="title">
+                    <h1>CALCULATOR</h1>
+                    <h2></h2>
+                </hgroup>
+
+
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width,inital-scale=1">
+
+                
+
+
+
+                <div class="cal">
+                    <div class="bg">
+                        <div class="display">
+                            <p id="display"></p>
+                        </div>
+
+                        <div class="buttons">
+                            <button onclick="getInputValue()">C</button>
+                            <button onclick="getInputValue()">DEL</button>
+                            <button onclick="getInputValue()">%</button>
+                            <button onclick="getInputValue()">/</button><br>
+                            <button onclick="getInputValue()">7</button>
+                            <button onclick="getInputValue()">8</button>
+                            <button onclick="getInputValue()">9</button>
+                            <button onclick="getInputValue()">*</button><br>
+                            <button onclick="getInputValue()">4</button>
+                            <button onclick="getInputValue()">5</button>
+                            <button onclick="getInputValue()">6</button>
+                            <button onclick="getInputValue()">-</button><br>
+                            <button onclick="getInputValue()">1</button>
+                            <button onclick="getInputValue()">2</button>
+                            <button onclick="getInputValue()">3</button>
+                            <button onclick="getInputValue()">+</button><br>
+                            <button onclick="getInputValue()">.</button>
+                            <button onclick="getInputValue()">0</button>
+                            <button onclick="getInputValue()">00</button>
+                            <button class="equalto" onclick="getInputValue()">=</button>
+                        </div>
+                    </div>
+                </div>
+            
+            
+            <style>
+                *{
+                    padding: 0;
+                    margin: 0;
+                    
+                }
+                .bg {
+                    border-radius: 37px;
+                    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+                    box-shadow: 27px 27px 66px #8c8c8c, -27px -27px 66px #ffffff;
+                    padding: 30px 30px 30px 30px;
+                }
+                .buttons button{
+                    margin-right: 6px;
+                    margin-bottom: 6px;
+                    width: 70px;
+                    height:70px;
+                    color: rgb(133, 113, 1);
+                    background-color: rgb(0, 162, 255);
+                    border-radius: 50%;
+                    font-size: 20px;
+                    font-weight: bold;
+                    border: none ;
+                    box-shadow: rgba(0,0,0,0.19) 0px 10px 20px, rgba(0,0,0,0.23) 0px 6px 6px;
+                    transition: 0.2s ease-in-out;
+                }
+                .buttons button:hover{
+                    background-color: rgb(247, 120, 2);
+                    color: rgb(242, 255, 240);
+                }
+                .cal{
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    margin-top: 8em;
+                }
+                .cal span{
+                    font-size: 16px;
+                }
+                .cal .display{
+                    background-color: rgb(4, 1, 5);
+                    border: 3px solid rgb(14, 9, 2);
+                    width: 96.3%;
+                    border-radius: 9px;
+                    height: 60px;
+                    margin-bottom: 8px;
+                    justify-content: center;
+                    align-items:center;
+                    box-shadow: rgba(0, 0, 0,0.15) 0px 5px 15px, rgba(0,0,0,0.15) 0px 6px 6px;
+                    font-size: 25px;
+                    line-height: 60px;
+                    font-weight: bold;
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: rgb(245, 254, 255);
+                    letter-spacing: 2px;
+                }
+                .display:hover{
+                    background-color: rgb(247, 240, 255);
+                }
+            
+            
+            </style>
+
+            <script src="./Calculator - My ASP.NET Web Page_files/CalJavaScript.js.download">
+    
+            </script>
+            
+            <article>
+                <p>
+                    
+                </p>
+            
+            </article>
+            
+            
+                        </section>
+                    </div>
+                    <div class="footer-basic">
+                        <footer>
+                            <center>
+                                <br>
+                                <h2 style="color:black;"> </h2>
+                                <br>
+
+
+                                <p class="copyright"></p>
+                                <br><br> <br><br>
+                            </center>
+                        </footer>
+                    </div>
+                  <style>
+                      .footer-basic{
+                      }
+                      .smd {
+                          padding: 2px 2px 2px 2px;
+                          margin-left: 5px;
+                          border-radius: 50%;
+                          background: linear-gradient(145deg, #ffffff, #e6e6e6);
+                          box-shadow: 8px 8px 20px #0c0505, -8px -8px 20px #ffffff;
+                      }
+                      .copyright {
+                          font-size:medium;
+           
+                          color:black;
+                          font-style:oblique;
+                      }
+                  </style>
+                        
+                    
+                
+            </body></html>
